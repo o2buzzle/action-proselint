@@ -22,6 +22,6 @@ function proselint2githubaction {
 # make the directory safe
 git config --global --add safe.directory /github/workspace
 
-a=`git ls-files '*.md'`
+a=`find . -name "*.md" -type f -print0 | xargs -0 -n1 echo`
 echo "Running proselint on $a"
 proselint $a | proselint2githubaction
