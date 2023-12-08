@@ -1,0 +1,5 @@
+name: 'Run proselint'
+description: 'Run proselint on the repository'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
